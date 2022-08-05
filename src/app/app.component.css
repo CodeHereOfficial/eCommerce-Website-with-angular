@@ -1,0 +1,15 @@
+p {
+  font-family: Lato;
+}
+body {
+  font-family: Lato;
+  color: rgb(16, 13, 13);
+}
+
+.naavbar-brand {
+  padding-top: 0;
+}
+
+.navbar-text a.active {
+  color: blue;
+}
