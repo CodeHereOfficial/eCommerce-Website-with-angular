@@ -1,13 +1,12 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid collapse navbar-collapse" id="navbarNavDropdown">
-    <a class="navbar-brand" href="#">eCommerce</a>
+    <a class="navbar-brand" style="font-weight:1000" href="#">eCommerce</a>
     <a class="nav-link" routerLink="/products" routerLinkActive="active"
-              >Products</a
-            >
+      >Products</a
+    >
     <!-- <span class="navbar-text active"> Products </span> -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      
       width="16"
       height="16"
       fill="currentColor"
@@ -19,10 +18,16 @@
       />
     </svg>
     <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
   </div>
 </nav>
+<h2 class="headline">Welcome to eCommerce Website..</h2>
 <!-- <app-product-list></app-product-list> -->
 <router-outlet></router-outlet>
