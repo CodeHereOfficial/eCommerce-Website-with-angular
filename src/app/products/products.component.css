@@ -1,11 +1,7 @@
-.example-card {
-  max-width: 100%;
+.mat-grid-tile {
+  background: purple;
 }
 
-.mat-grid-tile {
-  background: lightblue;
-}
-.mat-card-content {
+.content {
   padding: 16px;
 }
-

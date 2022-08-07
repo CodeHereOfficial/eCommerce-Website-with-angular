@@ -1,24 +1,63 @@
 <hr />
-<h3>Take a look at our different products...</h3>
-<p>Grab the best deals quickly!!</p>
+<h3 style="padding:0 16px">Take a look at our different products...</h3>
+<p style="padding:0 16px">Grab the best deals quickly!!</p>
 
+<div class="content">
+  <mat-grid-list cols="3" rowheight="1000px">
+    <mat-grid-tile *ngFor="let product of products$" class="cards">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>{{ product.title }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-img
+          height="50%"
+          width="100%"
+          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/surprising-flower-meanings-balloon-flowers-1650767465.jpg"
+          alt=""
+        />
+        <mat-card-content>
+          <p>{{ product.body }}</p>
+        </mat-card-content>
+        <mat-divider inset></mat-divider>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 
-
-<mat-grid-list cols="4" rowheight="500px">
-  <mat-grid-tile *ngFor="let product of products$">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>{{ product.title }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ product.body }}</p>
-      </mat-card-content>
-      <!-- <mat-divider inset></mat-divider> -->
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<!-- <div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="10px ">
+    <div
+      fxFlex="25%"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let product of products$"
+      style="background-color: purple"
+    >
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>{{ product.title }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-img height="100%" width="100%"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq5JMMDSMB-B4JdXbe6437ZiTn4cZTwE1nrQ&usqp=CAU"
+          
+        />
+        <mat-card-content>
+          <p>{{ product.body }}</p>
+        </mat-card-content>
+      <mat-divider inset></mat-divider> 
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div> -->

@@ -8,8 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './core/material.module';
 
-
-// import {ProductListComponent} from './products.component';
+// Material Modules
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
@@ -17,7 +24,15 @@ import { MaterialModule } from './core/material.module';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatToolbarModule
   ],
   declarations: [AppComponent, HelloComponent, ProductListComponent],
   bootstrap: [AppComponent],
