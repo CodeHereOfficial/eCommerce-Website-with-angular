@@ -2,15 +2,23 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct } from '../product';
+import { IProductTwo } from '../products/product2';
+
+
+
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ProductDataService {
-  url: any = 'https://dummyjson.com/products';
+
+  
+  url = 'https://jsonplaceholder.typicode.com/posts';
+   
+
   constructor(private http: HttpClient) {}
 
-  getProducts():Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.url);
+  getProducts(): Observable<IProductTwo[]> {
+    return this.http.get<IProductTwo[]>(this.url);
   }
 }
