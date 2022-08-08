@@ -18,3 +18,15 @@ body {
   border: 2px solid pink;
   
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.navbar {
+  justify-content: space-between;
+  
+}
+
+span {
+  padding-left: 1rem;
+}

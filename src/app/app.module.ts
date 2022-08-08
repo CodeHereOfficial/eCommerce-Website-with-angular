@@ -6,7 +6,7 @@ import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './core/material.module';
+// import { MaterialModule } from './core/material.module';
 
 // Material Modules
 import { MatCardModule } from '@angular/material/card';
@@ -17,6 +17,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 @NgModule({
   imports: [
@@ -24,7 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MaterialModule,
+    
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
@@ -32,7 +35,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatProgressBarModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
   declarations: [AppComponent, HelloComponent, ProductListComponent],
   bootstrap: [AppComponent],
