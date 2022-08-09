@@ -1,32 +1,25 @@
 <hr />
-<h3 style="padding:0 16px">Take a look at our different products...</h3>
-<p style="padding:0 16px">Grab the best deals quickly!!</p>
+<h3 style="padding: 0 16px">Take a look at our different products...</h3>
+<p style="padding: 0 16px">Grab the best deals quickly!!</p>
 
-<div class="content">
-  <mat-grid-list cols="4" rowheight="500px">
-    <mat-grid-tile *ngFor="let product of products" class="cards">
-      <mat-card class="example-card">
+<div>
+  <mat-grid-list cols="4" rowHeight="4:5" gutterSize="15px">
+    <mat-grid-tile *ngFor="let product of products">
+      <mat-card class="example-card mat-elevation-z5">
         <mat-card-header>
-          <mat-card-title>{{product.title}}</mat-card-title>
+          <mat-card-title>{{ product.title }}</mat-card-title>
           <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
         </mat-card-header>
-        <img
-          mat-card-img
-          height="50%"
-          width="100%"
-          src={{product.images[0]}}
-          
-        />
+        <img class="mat-card-img" mat-card-img src="{{ product.images[0] }}" />
         <mat-card-content>
           <p>{{ product.description }}</p>
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-button>LIKE</button>
+          <button mat-button>DETAILS</button>
           <button mat-button>SHARE</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
-
