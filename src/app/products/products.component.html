@@ -4,21 +4,21 @@
 
 <div class="content">
   <mat-grid-list cols="4" rowheight="500px">
-    <mat-grid-tile *ngFor="let product of products$" class="cards">
+    <mat-grid-tile *ngFor="let product of products" class="cards">
       <mat-card class="example-card">
         <mat-card-header>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>{{ product.title }}</mat-card-subtitle>
+          <mat-card-title>{{product.title}}</mat-card-title>
+          <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
         </mat-card-header>
         <img
           mat-card-img
           height="50%"
           width="100%"
-          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/surprising-flower-meanings-balloon-flowers-1650767465.jpg"
-          alt=""
+          src={{product.images[0]}}
+          
         />
         <mat-card-content>
-          <p>{{ product.body }}</p>
+          <p>{{ product.description }}</p>
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>

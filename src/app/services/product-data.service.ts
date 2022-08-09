@@ -1,24 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IProduct } from '../product';
-import { IProductTwo } from '../products/product2';
-
-
-
+import { appConstant } from '../app.constant';
+import { environment } from '../environments/environment';
+import { Product } from '../products/product';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductDataService {
-
-  
-  url = 'https://jsonplaceholder.typicode.com/posts';
-   
+  apiUrl = `${environment.apiEndpoint}${appConstant.apiRoute.products}`;
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<IProductTwo[]> {
-    return this.http.get<IProductTwo[]>(this.url);
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl);
   }
 }

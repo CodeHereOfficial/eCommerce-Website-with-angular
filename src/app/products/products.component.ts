@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDataService } from '../services/product-data.service';
+import { Product } from './product';
 
 
 @Component({
@@ -8,14 +9,16 @@ import { ProductDataService } from '../services/product-data.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  products$ : any;
-  constructor(public product: ProductDataService) {}
+  products : Array<Product>;
+
+  constructor(private product: ProductDataService) {}
 
 
   ngOnInit(): void {
     this.product.getProducts().subscribe((data: any[]) => {
-      this.products$ = data;
-      console.log(this.products$);
+      // const { products } : any = data ; destruction syntax
+      this.products = (data as any).products;   //converting object into array of products
+      console.log(this.products);
       console.log(data);
     });
   }
