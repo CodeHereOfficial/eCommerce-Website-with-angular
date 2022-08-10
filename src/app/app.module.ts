@@ -18,8 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-
-
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -27,7 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    
+
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
@@ -36,9 +35,14 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
   ],
-  declarations: [AppComponent, HelloComponent, ProductListComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    NavbarComponent,
+    ProductListComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
