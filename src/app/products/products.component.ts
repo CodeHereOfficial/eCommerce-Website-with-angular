@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDataService } from '../services/product-data.service';
 import { Product } from './product';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { Product } from './product';
 export class ProductListComponent implements OnInit {
   products : Array<Product>;
 
-  constructor(private product: ProductDataService) {}
+  constructor(private product: ProductDataService,
+    private router : Router) {}
 
 
   ngOnInit(): void {
@@ -22,7 +24,10 @@ export class ProductListComponent implements OnInit {
       console.log(data);
     });
   }
+  // getDetails(product) {
+  //   this.router.navigate(['/products',this.products.id])
 
+  // }
   
 }
 
