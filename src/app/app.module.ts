@@ -19,13 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
+
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-
+    
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
@@ -34,7 +36,7 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule,
+    MatIconModule
   ],
   declarations: [AppComponent, HelloComponent, ProductListComponent],
   bootstrap: [AppComponent],
