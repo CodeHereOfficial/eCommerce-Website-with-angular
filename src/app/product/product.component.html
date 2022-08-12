@@ -1,7 +1,11 @@
-<p>product details shown below</p>
-
-<div *ngIf="Product">
-  <h1>{{ product.title }}</h1>
-  <img [src]="product.images[0]" alt="" />
+<div>
+  <div>
+    <h1>{{ product.title }}</h1>
+  </div>
+  <div class="product-img"><img [src]="product.images[0]" alt="" /></div>
+  <p>{{ product.description }}</p>
   <p>${{ product.price }}</p>
+  <p>{{ product.rating }}</p>
+  <p>Brand: {{ product.brand }}</p>
+  <p>Category: {{ product.category }}</p>
 </div>
