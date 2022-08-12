@@ -1,0 +1,14 @@
+:host {
+  .product {
+    display: flex;
+    flex: 1;
+  }
+  .product-img {
+    flex: 1;
+  }
+  .product-prob {
+    padding-left: 10px;
+    background-color: violet;
+    flex: 1;
+  }
+}

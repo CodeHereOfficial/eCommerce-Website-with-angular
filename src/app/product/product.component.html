@@ -2,10 +2,16 @@
   <div>
     <h1>{{ product.title }}</h1>
   </div>
-  <div class="product-img"><img [src]="product.images[0]" alt="" /></div>
-  <p>{{ product.description }}</p>
-  <p>${{ product.price }}</p>
-  <p>{{ product.rating }}</p>
-  <p>Brand: {{ product.brand }}</p>
-  <p>Category: {{ product.category }}</p>
+  <div class="product">
+    <div class="product-img">
+      <img [src]="product.images[0]" alt="" />
+    </div>
+    <div class="product-prop">
+      <p>${{ product.price }}</p>
+      <p>Brand: {{ product.brand }}</p>
+      <p>Category: {{ product.category }}</p>
+      <p>{{ product.description }}</p>
+      <p>Rating: {{ product.rating }}</p>
+    </div>
+  </div>
 </div>
