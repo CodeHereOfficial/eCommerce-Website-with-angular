@@ -24,22 +24,6 @@
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
-  .navbar-text a.active {
-    color: blue;
-  }
-
-  .example-spacer {
-    flex: 1 1 auto;
-  }
-  .navbar {
-    justify-content: space-between;
-    font-size: medium;
-  }
-
-  span {
-    padding-left: 2rem;
-  }
-
   .navbar-brand {
     font-weight: 1000;
     font-size: 30px;
@@ -51,5 +35,19 @@
   }
   a.nav-link {
     color: white;
+  }
+
+  .btn {
+    outline: white;
+    color: white;
+  }
+  .btn:hover {
+    background-color: red;
+    outline: red;
+    color: black;
+  }
+  .navbar-toggler{
+    color: white;
+    background-color: white;
   }
 }
