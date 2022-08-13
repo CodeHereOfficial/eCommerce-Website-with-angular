@@ -46,7 +46,10 @@
     padding-left: 70px;
   }
 
-  #navbarSupportedContent {
-    padding: 0;
+  .navbar-nav {
+    margin-right: 15px;
+  }
+  a.nav-link {
+    color: white;
   }
 }
