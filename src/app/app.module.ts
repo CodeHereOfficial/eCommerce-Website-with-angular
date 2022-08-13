@@ -6,6 +6,7 @@ import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 // import { MaterialModule } from './core/material.module';
 
 // Material Modules
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   imports: [
@@ -36,6 +38,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatTooltipModule,
+    MdbCollapseModule
   ],
   declarations: [
     AppComponent,

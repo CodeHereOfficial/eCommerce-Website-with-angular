@@ -1,13 +1,24 @@
 :host {
   .product {
     display: flex;
-    align-items: stretch;
   }
   .product-img > img {
     flex: 1;
   }
   .product-prop {
-    flex: 1 auto;
     padding-left: 15px;
+    padding-top: 50px;
+
+    flex: 2;
+  }
+  .img-array {
+    display: flex;
+  }
+  .images {
+    flex: 1 1 1 1;
+  }
+  .cart:hover {
+    color: gold;
+    cursor: pointer;
   }
 }
