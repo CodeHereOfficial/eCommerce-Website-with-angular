@@ -7,6 +7,10 @@
     color: rgb(16, 13, 13);
   }
 
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
   .nav-grad1 {
     color: rgb(245, 237, 237);
     background: #0f0c29; /* fallback for old browsers */
@@ -46,8 +50,7 @@
     outline: red;
     color: black;
   }
-  .navbar-toggler{ 
+  .navbar-toggler {
     background-color: white;
-    
   }
 }

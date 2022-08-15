@@ -30,8 +30,18 @@ img {
   background-size: auto;
 }
 
-@media (max-width: 600px){
-  .para{
-    content: none;
+@media (max-width: 1000px) {
+  .para {
+    width: 75%;
+    padding: 0 0 0 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .headline {
+    font-size: 30px;
+  }
+  .para {
+    display: none;
   }
 }
