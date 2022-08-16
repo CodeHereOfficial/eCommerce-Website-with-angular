@@ -7,6 +7,8 @@ import { ProductListComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // import { MaterialModule } from './core/material.module';
 
 // Material Modules
@@ -28,6 +30,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    NgbModule,
 
     MatGridListModule,
     MatCardModule,
@@ -39,7 +42,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
-    MdbCollapseModule
+    MdbCollapseModule,
   ],
   declarations: [
     AppComponent,
