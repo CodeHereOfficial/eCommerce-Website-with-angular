@@ -11,7 +11,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductListComponent implements OnInit {
   products: Array<Product> = [];
-
+  breakpoint: number;
+  
   constructor(private product: ProductDataService, private router: Router) {}
 
   ngOnInit(): void {
@@ -21,6 +22,12 @@ export class ProductListComponent implements OnInit {
       console.log(this.products);
       console.log(data);
     });
+
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 4;
+  }
+ 
+  onResize(event:any) {
+    this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 4;   
   }
 
   getProductDetails(event: any, product: any): void {

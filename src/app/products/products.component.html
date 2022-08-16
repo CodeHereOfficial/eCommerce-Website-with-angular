@@ -4,7 +4,13 @@
 <p style="padding: 0 16px">Grab the best deals quickly!!</p>
 <br />
 <div>
-  <mat-grid-list cols="4" rowHeight="4:5" gutterSize="15px" class="grid-list">
+  <mat-grid-list
+    rowHeight="4:5"
+    gutterSize="15px"
+    class="grid-list"
+    [cols]="breakpoint"
+    (window:resize)="onResize($event)"
+  >
     <mat-grid-tile *ngFor="let product of products">
       <mat-card class="example-card mat-elevation-z5">
         <mat-card-header>

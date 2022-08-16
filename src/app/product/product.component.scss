@@ -1,24 +1,48 @@
 :host {
-  .product {
-    display: flex;
-  }
-  .product-img > img {
-    flex: 1;
-  }
-  .product-prop {
-    padding-left: 15px;
-    padding-top: 50px;
+  @media (min-width: 500px) {
+    .product {
+      display: flex;
+    }
+    .product-img > img {
+      width: 100%;
+      flex: 1;
+    }
+    .product-prop {
+      padding-left: 15px;
+      padding-top: 10px;
 
-    flex: 2;
+      flex: 2;
+    }
+    .img-array {
+      display: flex;
+    }
+    .images {
+      flex: 1 1 1 1;
+    }
+    .cart:hover {
+      color: gold;
+      cursor: pointer;
+    }
   }
-  .img-array {
-    display: flex;
+  @media only screen and (max-width: 500px) {
+    .product {
+      display: block;
+    }
+    .product-img > img {
+      width: 100%;
+    }
+    .product-prop {
+      padding-left: 15px;
+      padding-top: 10px;
+
+      flex: 2;
+    }
   }
-  .images {
-    flex: 1 1 1 1;
-  }
-  .cart:hover {
-    color: gold;
-    cursor: pointer;
+
+  @media (max-width: 768px) {
+    .product {
+      display: block;
+      align-items: center;
+    }
   }
 }
