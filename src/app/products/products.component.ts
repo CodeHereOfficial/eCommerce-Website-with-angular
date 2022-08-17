@@ -3,6 +3,7 @@ import { ProductDataService } from '../services/product-data.service';
 import { Product } from '../models/product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product-list',

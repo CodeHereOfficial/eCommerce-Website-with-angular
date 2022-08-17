@@ -30,4 +30,19 @@
   </div>
 </div>
 
-
+<div class="p-form" *ngIf="productForm">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div formGroupName="userData">
+      <div class="form-group">
+        <label for="username">title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          formControlName="title"
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
