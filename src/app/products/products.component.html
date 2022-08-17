@@ -3,9 +3,9 @@
 <h3 style="padding: 0 16px">Take a look at our different products...</h3>
 <p style="padding: 0 16px">Grab the best deals quickly!!</p>
 <br />
-<div>
+<div >
   <mat-grid-list
-    rowHeight="4:5"
+    rowHeight="4:6"
     gutterSize="15px"
     class="grid-list"
     [cols]="breakpoint"
@@ -22,7 +22,7 @@
           <p>{{ product.description }}</p>
         </mat-card-content>
         <mat-divider inset></mat-divider>
-        <mat-card-actions>
+        <mat-card-actions style="text-align:center;">
           <button
             class="btn-1"
             (click)="getProductDetails($event, product)"
