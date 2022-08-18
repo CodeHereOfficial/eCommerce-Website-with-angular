@@ -33,7 +33,7 @@
 <div class="p-form" *ngIf="productForm">
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="grid">
-      <div class="col-12 md:col-6 lg:col-3">
+      <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Title</mat-label>
           <input
@@ -48,53 +48,46 @@
         </mat-form-field>
       </div>
       <div class="col-12 md:col-6 lg:col-3">
-        <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Description</mat-label>
-            <input
-              type="text"
-              matInput
-              placeholder="Description"
-              formControlName="description"
-            />
-            <mat-error
-              *ngIf="productForm.get('description').hasError('required')"
-              >Description is <strong>required</strong></mat-error
-            >
-          </mat-form-field>
-        </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Description</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Description"
+            formControlName="description"
+          />
+          <mat-error *ngIf="productForm.get('description').hasError('required')"
+            >Title is <strong>required</strong></mat-error
+          >
+        </mat-form-field>
       </div>
       <div class="col-12 md:col-6 lg:col-3">
-        <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Category</mat-label>
-            <input
-              type="text"
-              matInput
-              placeholder="Category"
-              formControlName="category"
-            />
-            <mat-error *ngIf="productForm.get('category').hasError('required')"
-              >Category is <strong>required</strong></mat-error
-            >
-          </mat-form-field>
-        </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Category</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Category"
+            formControlName="category"
+          />
+          <mat-error *ngIf="productForm.get('category').hasError('required')"
+            >Title is <strong>required</strong></mat-error
+          >
+        </mat-form-field>
       </div>
       <div class="col-12 md:col-6 lg:col-3">
-        <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Price</mat-label>
-            <input
-              type="number"
-              matInput
-              placeholder="Price"
-              formControlName="price"
-            />
-            <mat-error *ngIf="productForm.get('price').hasError('required')"
-              >Price is <strong>required</strong></mat-error
-            >
-          </mat-form-field>
-        </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Price</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="Price"
+            formControlName="price"
+          />
+          <mat-error *ngIf="productForm.get('price').hasError('required')"
+            >Title is <strong>required</strong></mat-error
+          >
+        </mat-form-field>
       </div>
     </div>
     <div class="center-form">
