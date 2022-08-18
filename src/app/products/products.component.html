@@ -4,13 +4,7 @@
 <p style="padding: 0 16px">Grab the best deals quickly!!</p>
 <br />
 <div>
-  <mat-grid-list
-    rowHeight="4:6"
-    gutterSize="15px"
-    class="grid-list"
-    [cols]="breakpoint"
-    (window:resize)="onResize($event)"
-  >
+  <mat-grid-list cols="4" rowHeight="4:5" gutterSize="15px">
     <mat-grid-tile *ngFor="let product of products">
       <mat-card class="example-card mat-elevation-z5">
         <mat-card-header>
@@ -22,13 +16,12 @@
           <p>{{ product.description }}</p>
         </mat-card-content>
         <mat-divider inset></mat-divider>
-        <mat-card-actions style="text-align:center;">
+        <mat-card-actions>
           <button
             class="btn-1"
             (click)="getProductDetails($event, product)"
             mat-button
-            mat-raised-button
-            matTooltip="Get details of the product"
+            matTooltip="get more details of this product"
           >
             DETAILS
           </button>
