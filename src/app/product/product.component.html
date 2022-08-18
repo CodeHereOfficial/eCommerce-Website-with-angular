@@ -30,8 +30,16 @@
   </div>
 </div>
 
+
+<div class="grid">
+<div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">A</div>
+<div class="col-12 md:col-6 lg:col-3">B</div>
+<div class="col-12 md:col-6 lg:col-3">C</div>
+<div class="col-12 md:col-6 lg:col-3">D</div>
+</div>
+
 <div class="p-form" *ngIf="productForm">
-  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" novalidate>
     <div formGroupName="userData">
       <div class="form-group">
         <label for="username">title</label>
