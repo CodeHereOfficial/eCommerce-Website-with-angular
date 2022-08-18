@@ -31,12 +31,7 @@
 </div>
 
 <div class="p-form" *ngIf="productForm">
-  <form
-    [formGroup]="productForm"
-    (ngSubmit)="onSubmit()"
-    novalidate
-    style="background-color:red"
-  >
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="grid">
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
