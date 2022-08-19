@@ -31,6 +31,7 @@
 </div>
 
 <div class="p-form" *ngIf="productForm">
+  <h2 style="background-color: gold; text-align:center">Filter Area</h2>
   <form
     [formGroup]="productForm"
     (ngSubmit)="onSubmit(productForm.value, productForm.isValid)"
@@ -141,7 +142,7 @@
     </div>
     <div class="center-form">
       <button
-        [disabled]="!productForm.isvalid"
+        [disabled]="productForm.isValid"
         class="btn btn-primary"
         type="submit"
       >
