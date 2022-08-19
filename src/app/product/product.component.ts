@@ -41,7 +41,7 @@ export class ProductComponent implements OnInit {
       price: [product.price, Validators.required],
       brand: [product.brand, Validators.required],
       stock: [product.stock, Validators.required],
-      rating: [product.rating, Validators.required],
+      rating: [product.rating, Validators.compose([Validators.required, Validators.max(10)])],
     });
   }
 
