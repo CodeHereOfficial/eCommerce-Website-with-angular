@@ -3,9 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { appConstant } from '../app.constant';
 import { environment } from '../environments/environment';
-
 import { FormBuilder, Validators } from '@angular/forms';
-import { FormControl, FormGroup, FormControlName } from '@angular/forms';
 import { Product } from '../models/product';
 
 @Component({
@@ -41,6 +39,9 @@ export class ProductComponent implements OnInit {
       description: [product.description, [Validators.required]],
       category: [product.category, Validators.required],
       price: [product.price, Validators.required],
+      brand: [product.brand, Validators.required],
+      stock: [product.stock, Validators.required],
+      rating: [product.rating, Validators.required],
     });
   }
 
@@ -49,19 +50,24 @@ export class ProductComponent implements OnInit {
       .get(`${environment.apiEndpoint}${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
-        this.initializeForm(data);
+
         console.log(data);
       });
   }
-  onSubmit() {
-    console.log(this.productForm.value);
+  onSubmit(formData: any, isValid: boolean) {
+    if (isValid) {
+      this.http.put(
+        `${environment.apiEndpoint}${appConstant.apiRoute.products}/${this.id}`,
+        formData
+      );
+    }
   }
   getDetails(id: number) {
     this.http
       .get(`${environment.apiEndpoint}${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
-        console.log(data);
+        this.initializeForm(data);
       });
   }
 }
