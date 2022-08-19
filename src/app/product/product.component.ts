@@ -5,6 +5,7 @@ import { appConstant } from '../app.constant';
 import { environment } from '../environments/environment';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Product } from '../models/product';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-product',
@@ -20,6 +21,7 @@ export class ProductComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
     private formBuilder: FormBuilder,
+    
     
   ) {}
 
