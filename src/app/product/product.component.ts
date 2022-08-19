@@ -19,7 +19,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    
   ) {}
 
   ngOnInit(): void {
@@ -45,15 +46,6 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  knowProduct(id: number): any {
-    this.http
-      .get(`${environment.apiEndpoint}${appConstant.apiRoute.products}/${id}`)
-      .subscribe((data) => {
-        this.product = data;
-
-        console.log(data);
-      });
-  }
   onSubmit(formData: any, isValid: boolean) {
     if (isValid) {
       this.http.put(
