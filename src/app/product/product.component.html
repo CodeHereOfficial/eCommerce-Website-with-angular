@@ -19,8 +19,6 @@
       <p><b>Stock:</b> {{ product.stock }}</p>
       <p><b>Discount Percentage:</b> {{ product.discountPercentage }}</p>
       <p><b>Rating:</b> {{ product.rating }}</p>
-      <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
-      <!-- <span><mat-icon class="cart">shopping_cart</mat-icon></span> -->
       <div class="img-array">
         <div class="immages">
           <img [src]="product.images[0][0]" alt="" />
@@ -45,7 +43,7 @@
             type="email"
             matInput
             placeholder="title"
-            formControlName="title"
+            formControlName="{{ appConstant.forms.product.title }}"
           />
           <mat-error *ngIf="productForm.get('title').hasError('required')"
             >Title is <strong>required</strong></mat-error
@@ -59,7 +57,7 @@
             type="text"
             matInput
             placeholder="Description"
-            formControlName="description"
+            formControlName="{{ appConstant.forms.product.description }}"
           />
           <mat-error *ngIf="productForm.get('description').hasError('required')"
             >Description is <strong>required</strong></mat-error
@@ -73,7 +71,7 @@
             type="text"
             matInput
             placeholder="Category"
-            formControlName="category"
+            formControlName="{{ appConstant.forms.product.category }}"
           />
           <mat-error *ngIf="productForm.get('category').hasError('required')"
             >Category is <strong>required</strong></mat-error
@@ -87,7 +85,7 @@
             type="number"
             matInput
             placeholder="Price"
-            formControlName="price"
+            formControlName="{{ appConstant.forms.product.price }}"
           />
           <mat-error *ngIf="productForm.get('price').hasError('required')"
             >Price is <strong>required</strong></mat-error
@@ -101,7 +99,7 @@
             type="text"
             matInput
             placeholder="Brand"
-            formControlName="brand"
+            formControlName="{{ appConstant.forms.product.brand }}"
           />
           <mat-error *ngIf="productForm.get('brand').hasError('required')"
             >Brand is <strong>required</strong></mat-error
@@ -115,7 +113,7 @@
             type="number"
             matInput
             placeholder="Stock"
-            formControlName="stock"
+            formControlName="{{ appConstant.forms.product.stock }}"
           />
           <mat-error *ngIf="productForm.get('stock').hasError('required')"
             >Stock is <strong>required</strong></mat-error
@@ -129,7 +127,7 @@
             type="number"
             matInput
             placeholder="Rating"
-            formControlName="rating"
+            formControlName="{{ appConstant.forms.product.rating }}"
           />
           <mat-error *ngIf="productForm.get('rating').hasError('required')"
             >Rating is <strong>required</strong></mat-error

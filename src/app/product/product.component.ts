@@ -6,6 +6,8 @@ import { environment } from '../environments/environment';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Product } from '../models/product';
 import { ApiService } from '../services/api.service';
+import { CommonModule } from '@angular/common';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-product',
@@ -21,8 +23,8 @@ export class ProductComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
     private formBuilder: FormBuilder,
-    
-    
+    private apiService: ApiService,
+    private commonService: CommonService
   ) {}
 
   ngOnInit(): void {
@@ -32,36 +34,40 @@ export class ProductComponent implements OnInit {
     this.initialize();
   }
 
+  get appConstant() {
+    return appConstant;
+  }
   initialize() {
     this.initializeForm(this.product);
   }
 
   initializeForm(product: any) {
-    this.productForm = this.formBuilder.group({
-      title: [product.title, Validators.required],
-      description: [product.description, [Validators.required]],
-      category: [product.category, Validators.required],
-      price: [product.price, Validators.required],
-      brand: [product.brand, Validators.required],
-      stock: [product.stock, Validators.required],
-      rating: [product.rating, Validators.compose([Validators.required, Validators.max(10)])],
-    });
+    this.productForm = this.commonService.createProductForm(product);
   }
 
   onSubmit(formData: any, isValid: boolean) {
     if (isValid) {
-      this.http.put(
-        `${environment.apiEndpoint}${appConstant.apiRoute.products}/${this.id}`,
-        formData
-      );
+      console.log(formData);
+      this.apiService
+        .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
+        .subscribe(
+          (data) => {
+            console.log('data updated');
+            console.log(data);
+          },
+          (err) => {
+            console.log(err);
+          }
+        );
     }
   }
   getDetails(id: number) {
-    this.http
-      .get(`${environment.apiEndpoint}${appConstant.apiRoute.products}/${id}`)
+    this.apiService
+      .httpGet(`${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
         this.initializeForm(data);
+        console.log(data);
       });
   }
 }
