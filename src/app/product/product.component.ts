@@ -2,11 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { appConstant } from '../app.constant';
-import { environment } from '../environments/environment';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Product } from '../models/product';
 import { ApiService } from '../services/api.service';
-import { CommonModule } from '@angular/common';
 import { CommonService } from '../services/common.service';
 
 @Component({
@@ -31,7 +29,7 @@ export class ProductComponent implements OnInit {
     this.activatedRoute.params.subscribe((data) => {
       this.getDetails((data as any).id);
     });
-    this.initialize();
+    // this.initialize();
   }
 
   get appConstant() {
@@ -70,4 +68,12 @@ export class ProductComponent implements OnInit {
         console.log(data);
       });
   }
+
+  // productUpdate(event: boolean) {
+  //   if (!(event as any).target) {
+  //     this.showMessage = event;
+  //   }
+  // }
+
+  //   showMessage(event: boolean) {}
 }
