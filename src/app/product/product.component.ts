@@ -19,8 +19,8 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private http: HttpClient,
-    private formBuilder: FormBuilder,
+    // private http: HttpClient,
+    // private formBuilder: FormBuilder,
     private apiService: ApiService,
     private commonService: CommonService
   ) {}

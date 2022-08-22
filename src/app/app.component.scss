@@ -46,3 +46,10 @@ img {
     display: none;
   }
 } */
+:host {
+  .headline {
+    padding: 30px;
+    margin: 10px;
+    border: 2px solid pink;
+  }
+}
