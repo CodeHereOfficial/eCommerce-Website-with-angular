@@ -1,3 +1,28 @@
-<p>
-product-list works!
-</p>
+<div *ngIf="product">
+  <div>
+    <h1 style="padding-left: 20px; background-color: gold; text-align: center">
+      <strong>{{ product.title }}</strong>
+    </h1>
+  </div>
+  <div class="product">
+    <div class="product-img">
+      <img [src]="product.images[0]" alt="" />
+    </div>
+    <div class="product-prop">
+      <p style="font-weight: bold"><b>Price:</b> ${{ product.price }}</p>
+      <p><b>Brand:</b> {{ product.brand }}</p>
+      <p><b>Category:</b> {{ product.category }}</p>
+      <p>
+        <b>All about {{ product.title }} :</b> {{ product.description }}
+      </p>
+      <p><b>Stock:</b> {{ product.stock }}</p>
+      <p><b>Discount Percentage:</b> {{ product.discountPercentage }}</p>
+      <p><b>Rating:</b> {{ product.rating }}</p>
+      <div class="img-array">
+        <div class="immages">
+          <img [src]="product.images[0][0]" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

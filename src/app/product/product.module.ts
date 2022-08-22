@@ -7,7 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ProductComponent } from './product.component';
 import { ProductFormComponent } from './product-form/product-form.component';
-// import { ProductListComponent } from './product-list/product-list.component';
+import { ProductListingComponent } from './product-list/product-list.component';
+
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
     MatFormFieldModule,
     MatInputModule,
   ],
-  declarations: [ProductComponent, ProductFormComponent],
+  declarations: [ProductComponent, ProductFormComponent, ProductListingComponent],
   exports: [ProductComponent],
 })
 export class ProductModule {}
