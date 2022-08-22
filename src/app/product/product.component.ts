@@ -15,32 +15,21 @@ import { CommonService } from '../services/common.service';
 export class ProductComponent implements OnInit {
   product: Product | any = '';
   id: number | string = '';
-  productForm: any;
+  showMessage: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    // private http: HttpClient,
-    // private formBuilder: FormBuilder,
-    private apiService: ApiService,
-    private commonService: CommonService
+    private apiService: ApiService
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data) => {
       this.getDetails((data as any).id);
     });
-    // this.initialize();
   }
 
   get appConstant() {
     return appConstant;
-  }
-  initialize() {
-    this.initializeForm(this.product);
-  }
-
-  initializeForm(product: any) {
-    this.productForm = this.commonService.createProductForm(product);
   }
 
   onSubmit(formData: any, isValid: boolean) {
@@ -64,16 +53,16 @@ export class ProductComponent implements OnInit {
       .httpGet(`${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
-        this.initializeForm(data);
         console.log(data);
       });
   }
 
-  // productUpdate(event: boolean) {
-  //   if (!(event as any).target) {
-  //     this.showMessage = event;
-  //   }
-  // }
-
-  //   showMessage(event: boolean) {}
+  productUpdate(event: boolean) {
+    if (!(event as any).target) {
+      this.showMessage = event;
+    }
+    setTimeout(() => {
+      this.showMessage = false;
+    }, 2000);
+  }
 }
