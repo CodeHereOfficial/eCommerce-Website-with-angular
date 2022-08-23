@@ -10,7 +10,7 @@ import { CommonService } from '../../services/common.service';
 export class ProductFormComponent implements OnInit {
   productForm: any;
 
-  @Input() product: Product;
+  @Input() product: string | undefined;
   @Output() submit: EventEmitter<boolean> = new EventEmitter(false);
 
   constructor(

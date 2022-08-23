@@ -4,8 +4,8 @@
 <p style="padding: 0 16px">Grab the best deals quickly!!</p>
 <br />
 <div>
-  <mat-grid-list cols="4" rowHeight="4:5" gutterSize="15px">
-    <mat-grid-tile *ngFor ="let product of products">
+  <mat-grid-list cols="breakpoint" rowHeight="4:5" gutterSize="15px">
+    <mat-grid-tile *ngFor="let product of products">
       <mat-card class="example-card mat-elevation-z5">
         <mat-card-header>
           <mat-card-title>{{ product.title }}</mat-card-title>
@@ -36,13 +36,13 @@
   </mat-grid-list>
 </div>
 <div>
-<mat-paginator
-  class="paginator"
-  [length]="length"
-  [pageSize]="pageSize"
-  [pageSizeOptions]="pageSizeOptions"
-  (page)="onPagination($event)"
-  aria-label="Select page"
->
-</mat-paginator>
+  <mat-paginator
+    class="paginator"
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="onPagination($event)"
+    aria-label="Select page"
+  >
+  </mat-paginator>
 </div>

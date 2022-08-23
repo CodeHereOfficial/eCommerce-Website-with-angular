@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDataService } from '../services/product-data.service';
 import { Product } from '../models/product';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { environment } from '../environments/environment';
+import { appConstant } from '../app.constant';
 import { HttpClient } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PageEvent } from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-product-list',
@@ -20,7 +23,7 @@ export class ProductListComponent implements OnInit {
   // MatPaginator Output
   pageEvent: PageEvent | undefined;
 
-  constructor(private product: ProductDataService, private router: Router) {}
+  constructor(private product: ProductDataService, private router: Router,  private http: HttpClient) {}
 
   ngOnInit(): void {
     this.product.getProducts().subscribe((data: any[]) => {
