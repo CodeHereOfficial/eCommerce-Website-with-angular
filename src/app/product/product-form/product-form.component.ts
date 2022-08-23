@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { appConstant } from '../../app.constant';
 import { CommonService } from '../../services/common.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-product-form',
@@ -9,6 +10,7 @@ import { CommonService } from '../../services/common.service';
 })
 export class ProductFormComponent implements OnInit {
   productForm: any;
+  id: number | string = '';
 
   @Input() product: string | undefined;
   @Output() submit: EventEmitter<boolean> = new EventEmitter(false);
