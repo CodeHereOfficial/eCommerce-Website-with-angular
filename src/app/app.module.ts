@@ -24,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ProductModule } from './product/product.module';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
@@ -47,6 +48,7 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
     MdbCollapseModule,
     MatFormFieldModule,
     MatInputModule,
+    MatPaginatorModule
   ],
   declarations: [AppComponent, NavbarComponent, ProductListComponent],
   bootstrap: [AppComponent],
